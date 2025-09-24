@@ -15,7 +15,6 @@ class Solution:
                 if cnt==m:
                     return i  
         return -1    
-
 obj=Solution()
 haystack = "sadbutsad"
 needle = "sad"
