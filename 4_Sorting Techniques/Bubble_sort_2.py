@@ -9,8 +9,8 @@ for i in range(len(nums)):
             nums[i],nums[j]=nums[j],nums[i]
             didswap=1
         
-        if didswap==0:
-            break
+        # if didswap==0:
+        #     break
         print("times")
 
 print("After Sorting : ",nums)
