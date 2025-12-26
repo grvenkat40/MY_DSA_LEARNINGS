@@ -1,0 +1,20 @@
+from queue import deque
+class Solution:
+    def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
+        q = deque(students)
+        i = 0
+        att = 0
+        while q and att < len(q):
+            if q[0] == sandwiches[i]:
+                q.popleft()
+                i += 1
+                att = 0
+            else:
+                q.append(q.popleft())
+                att += 1
+        return len(q)
+
+obj = Solution()
+students = [1,1,0,0]
+sandwiches = [0,1,0,1]
+print(obj.countStudents(students, sandwiches))
