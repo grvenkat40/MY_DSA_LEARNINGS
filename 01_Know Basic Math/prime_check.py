@@ -1,6 +1,6 @@
 import math
-class prime_check():
-    def prime(self,n):
+class prime:
+    def prime_check(self,n):
         cnt=0
         arr=[]
         sqrt=int(math.sqrt(n))
@@ -13,13 +13,31 @@ class prime_check():
                     cnt+=1
         return arr
         return cnt
+    
+    def prime_printer(self, n):
+        def check(num):
+            if num < 2:
+                return False
+            for i in range(2, int(num**0.5)+1):
+                if num % i == 0:
+                    return False
+            return True
+        cnt = 0
+        num = 2
+        while cnt < n:
+            if check(num):
+                print(num, end=' ')
+                cnt += 1
+            num += 1
 
-obj=prime_check()
-n=int(input())
-prime_count=obj.prime(n)
-print(prime_count)
+
+obj=prime()
+# n=int(input("enter: "))
+# prime_count=obj.prime_check(n)
+print_n_prime = obj.prime_printer(1000)
+# print(prime_count)
 # if prime_count == 2:
-    # print(n,"is Prime")
-
+#     print(n,"is Prime")
 # else:
 #     print(n,"is not Prime")
+
