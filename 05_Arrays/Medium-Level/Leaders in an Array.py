@@ -2,8 +2,8 @@
 The rightmost element is always a leader. 
 The elements in the leader array must appear in the order they appear in the nums array."""
 
-# nums = [1, 2, 5, 3, 1, 2]
-nums = [-3, 4, 5, 1, -30, -10]
+nums = [1, 2, 5, 3, 1, 2]
+# nums = [-3, 4, 5, 1, -30, -10]
 # nums = [-3, 4, 5, 1, -4, -5]
 n = len(nums)
 leader = []
@@ -14,3 +14,16 @@ for i in range(n-2,-1,-1):
         leader.append(nums[i])
 leader.reverse()
 print(leader)
+
+
+#----------------------------------------------------------
+
+def leaders(nums):
+    res = []
+    for i in range(len(nums)-1):
+        if nums[i] > nums[i+1]:
+            res.append(nums[i])
+    res.append(nums[-1])
+    return res
+
+print(leaders(nums))
