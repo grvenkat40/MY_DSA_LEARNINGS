@@ -11,7 +11,7 @@ class Solution:
                 j=mid-1
                 ans=mid
             else:
-                i=i=mid+1
+                i=mid+1
         return ans
 obj=Solution()
 x = 5
