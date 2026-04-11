@@ -1,6 +1,6 @@
 import math
 class prime:
-    def prime_check(self,n):
+    def finding_Factors(self,n):
         cnt=0
         arr=[]
         sqrt=int(math.sqrt(n))
@@ -12,7 +12,6 @@ class prime:
                     arr.append(int(n/i))
                     cnt+=1
         return arr
-        return cnt
     
     def prime_printer(self, n):
         def check(num):
@@ -33,7 +32,7 @@ class prime:
 
 obj=prime()
 # n=int(input("enter: "))
-# prime_count=obj.prime_check(n)
+# prime_count=obj.finding_Factors(1000)
 print_n_prime = obj.prime_printer(1000)
 # print(prime_count)
 # if prime_count == 2:

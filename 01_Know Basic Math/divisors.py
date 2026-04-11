@@ -18,8 +18,10 @@ class divisors:
         print(sqrt)
         for i in range(1,sqrt+1):
             if n%i==0:
+                print(n,i,"->", n%i)
                 arr.append(i)
                 if n/i !=i:
+                    print(n,i,"->",n/i)
                     arr.append(int(n/i))
         return arr
 obj=divisors()

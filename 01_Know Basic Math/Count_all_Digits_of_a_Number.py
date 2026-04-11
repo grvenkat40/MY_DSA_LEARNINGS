@@ -2,9 +2,10 @@
 def countDigit(n):
     counts=0
     while(n>0):
-        last=n%10
-        counts+=1
+        # last=n%10
         n=n//10
+        counts+=1
+        
     print(counts)
 
 # obj=()
